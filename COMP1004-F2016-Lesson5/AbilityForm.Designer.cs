@@ -32,11 +32,11 @@
             this.StrengthTextBox = new System.Windows.Forms.TextBox();
             this.DexterityTextBox = new System.Windows.Forms.TextBox();
             this.DexterityLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ConstitutionTextBox = new System.Windows.Forms.TextBox();
             this.Constitution = new System.Windows.Forms.Label();
             this.IntelligenceTextBox = new System.Windows.Forms.TextBox();
             this.IntelligenceLabel = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.WisdomTextBox = new System.Windows.Forms.TextBox();
             this.WisdomLabel = new System.Windows.Forms.Label();
             this.CharismaTextBox = new System.Windows.Forms.TextBox();
             this.CharismaLabel = new System.Windows.Forms.Label();
@@ -62,6 +62,7 @@
             this.StrengthTextBox.ReadOnly = true;
             this.StrengthTextBox.Size = new System.Drawing.Size(105, 39);
             this.StrengthTextBox.TabIndex = 1;
+            this.StrengthTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // DexterityTextBox
             // 
@@ -73,7 +74,7 @@
             this.DexterityTextBox.ReadOnly = true;
             this.DexterityTextBox.Size = new System.Drawing.Size(105, 39);
             this.DexterityTextBox.TabIndex = 3;
-            this.DexterityTextBox.TextChanged += new System.EventHandler(this.DexterityTextBox_TextChanged);
+            this.DexterityTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // DexterityLabel
             // 
@@ -83,18 +84,18 @@
             this.DexterityLabel.Size = new System.Drawing.Size(142, 32);
             this.DexterityLabel.TabIndex = 2;
             this.DexterityLabel.Text = "Dexterity";
-            this.DexterityLabel.Click += new System.EventHandler(this.DexterityLabel_Click);
             // 
-            // textBox1
+            // ConstitutionTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(204, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(105, 39);
-            this.textBox1.TabIndex = 5;
+            this.ConstitutionTextBox.BackColor = System.Drawing.Color.White;
+            this.ConstitutionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ConstitutionTextBox.Enabled = false;
+            this.ConstitutionTextBox.Location = new System.Drawing.Point(204, 118);
+            this.ConstitutionTextBox.Name = "ConstitutionTextBox";
+            this.ConstitutionTextBox.ReadOnly = true;
+            this.ConstitutionTextBox.Size = new System.Drawing.Size(105, 39);
+            this.ConstitutionTextBox.TabIndex = 5;
+            this.ConstitutionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Constitution
             // 
@@ -115,6 +116,7 @@
             this.IntelligenceTextBox.ReadOnly = true;
             this.IntelligenceTextBox.Size = new System.Drawing.Size(105, 39);
             this.IntelligenceTextBox.TabIndex = 7;
+            this.IntelligenceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // IntelligenceLabel
             // 
@@ -125,16 +127,17 @@
             this.IntelligenceLabel.TabIndex = 6;
             this.IntelligenceLabel.Text = "Intelligence";
             // 
-            // textBox3
+            // WisdomTextBox
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(204, 208);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(105, 39);
-            this.textBox3.TabIndex = 9;
+            this.WisdomTextBox.BackColor = System.Drawing.Color.White;
+            this.WisdomTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.WisdomTextBox.Enabled = false;
+            this.WisdomTextBox.Location = new System.Drawing.Point(204, 208);
+            this.WisdomTextBox.Name = "WisdomTextBox";
+            this.WisdomTextBox.ReadOnly = true;
+            this.WisdomTextBox.Size = new System.Drawing.Size(105, 39);
+            this.WisdomTextBox.TabIndex = 9;
+            this.WisdomTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // WisdomLabel
             // 
@@ -155,6 +158,7 @@
             this.CharismaTextBox.ReadOnly = true;
             this.CharismaTextBox.Size = new System.Drawing.Size(105, 39);
             this.CharismaTextBox.TabIndex = 11;
+            this.CharismaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CharismaLabel
             // 
@@ -173,6 +177,7 @@
             this.RollButton.TabIndex = 12;
             this.RollButton.Text = "Roll Abilities";
             this.RollButton.UseVisualStyleBackColor = true;
+            this.RollButton.Click += new System.EventHandler(this.RollButton_Click);
             // 
             // AbilityForm
             // 
@@ -182,11 +187,11 @@
             this.Controls.Add(this.RollButton);
             this.Controls.Add(this.CharismaTextBox);
             this.Controls.Add(this.CharismaLabel);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.WisdomTextBox);
             this.Controls.Add(this.WisdomLabel);
             this.Controls.Add(this.IntelligenceTextBox);
             this.Controls.Add(this.IntelligenceLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ConstitutionTextBox);
             this.Controls.Add(this.Constitution);
             this.Controls.Add(this.DexterityTextBox);
             this.Controls.Add(this.DexterityLabel);
@@ -197,6 +202,7 @@
             this.Name = "AbilityForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ability Form";
+            this.Load += new System.EventHandler(this.AbilityForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,11 +214,11 @@
         private System.Windows.Forms.TextBox StrengthTextBox;
         private System.Windows.Forms.TextBox DexterityTextBox;
         private System.Windows.Forms.Label DexterityLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ConstitutionTextBox;
         private System.Windows.Forms.Label Constitution;
         private System.Windows.Forms.TextBox IntelligenceTextBox;
         private System.Windows.Forms.Label IntelligenceLabel;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox WisdomTextBox;
         private System.Windows.Forms.Label WisdomLabel;
         private System.Windows.Forms.TextBox CharismaTextBox;
         private System.Windows.Forms.Label CharismaLabel;
